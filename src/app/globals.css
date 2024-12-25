@@ -96,6 +96,12 @@
   touch-action: pan-y pinch-zoom;
 }
 .slider__slide {
-  flex: 0 0 70%;
+  flex: 0 0 30%;
   padding-left: 1rem;
+}
+
+@media screen and (max-width: 640px) {
+  .slider__slide {
+    flex: 0 0 65%;
+  }
 }

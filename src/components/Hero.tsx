@@ -4,8 +4,22 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Search } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useDebounceValue } from "usehooks-ts";
 
 export default function Hero() {
+  const defaultValue = "";
+  const [debouncedValue, setValue] = useDebounceValue(defaultValue, 700);
+  const router = useRouter();
+  console.log(debouncedValue);
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      console.log("enter");
+      router.push(`/search?q=${debouncedValue}`);
+    }
+  };
+
   return (
     <div className="relative h-[600px] flex items-center justify-center">
       {/* Background Image */}
@@ -40,9 +54,12 @@ export default function Hero() {
               <TabsTrigger value="sell">Sell</TabsTrigger>
             </TabsList>
             <TabsContent value="buy" className="space-y-4">
-              <div className="flex gap-4">
+              <div className="flex flex-col lg:flex-row gap-4">
                 <Input
                   type="text"
+                  defaultValue={defaultValue}
+                  onChange={(event) => setValue(event.target.value)}
+                  onKeyDown={handleKeyDown}
                   placeholder="Enter location, project name, or keyword"
                   className="flex-1"
                 />

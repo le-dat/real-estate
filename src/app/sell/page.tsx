@@ -119,7 +119,7 @@ export default function SellPage() {
             <DialogHeader>
               <DialogTitle>Listing Submitted Successfully</DialogTitle>
               <DialogDescription>
-                Your property has been submitted for review. We'll notify you once it's live on our platform.
+                Your property has been submitted for review. We&apos;ll notify you once it&apos;s live on our platform.
               </DialogDescription>
             </DialogHeader>
             <DialogFooter>

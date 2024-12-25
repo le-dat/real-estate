@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Bath, BedDouble, MapPin, Square } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const featuredListings = [
   {
@@ -69,17 +70,19 @@ const featuredListings = [
 export default function FeaturedListings() {
   return (
     <section className="container mx-auto px-4 py-12">
-      <div className="flex justify-between items-center mb-8">
-        <h2 className="text-3xl font-bold">Featured Properties</h2>
-        <a href="/properties" className="text-primary hover:underline">
+      <div className="flex flex-col lg:flex-row justify-between items-center mb-8">
+        <h2 className="text-2xl lg:text-3xl font-bold">Featured Properties</h2>
+        <Link href="/properties" className="hidden lg:block text-primary hover:underline">
           View all properties →
-        </a>
+        </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {featuredListings.map((listing) => (
           <Card key={listing.id} className="overflow-hidden h-full">
             <div className="relative h-48">
-              <Badge variant='warning' className="absolute top-2 right-2 z-10">{listing.type}</Badge>
+              <Badge variant="warning" className="absolute top-2 right-2 z-10">
+                {listing.type}
+              </Badge>
               <Image src={listing.image} alt={listing.title} fill className="object-cover" />
             </div>
             <CardContent className="p-4">
@@ -106,6 +109,10 @@ export default function FeaturedListings() {
             </CardFooter>
           </Card>
         ))}
+
+        <Link href="/properties" className="lg:hidden text-primary text-center hover:underline mt-4">
+          View all properties →
+        </Link>
       </div>
     </section>
   );

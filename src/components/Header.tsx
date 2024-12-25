@@ -16,7 +16,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center mx-auto">
+      <div className="container flex h-16 items-center mx-auto px-4 lg:px-0">
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="ghost" className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden">
@@ -29,7 +29,7 @@ export default function Header() {
           </SheetContent>
         </Sheet>
         
-        <Link href="/" className="mr-6 flex items-center space-x-2">
+        <Link href="/" className="hidden mr-6 md:flex items-center space-x-2">
           <span className="font-bold text-xl">RealEstate</span>
         </Link>
 
