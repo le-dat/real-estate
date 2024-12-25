@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Real Estate Platform
+
+This project is a comprehensive real estate platform built with Next.js. It helps users find their dream properties from millions of listings, allowing them to buy, sell, or rent properties with ease.
+
+## Features
+
+- **Property Listings**: Browse through a vast collection of property listings.
+- **Advanced Search**: Use filters to find properties that match specific criteria.
+- **User Authentication**: Secure login and registration for users.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Property Details**: View detailed information about each property.
+- **Favorites**: Save favorite properties for quick access later.
+- **Contact Agents**: Get in touch with property agents directly through the platform.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- **Node.js** (v20 or higher)
+- **npm** or **yarn**
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+# or
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Running the Development Server
+Start the development server:
 
-## Learn More
+```bash
+npm run dev | yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open http://localhost:3000 with your browser to see the result.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Building for Production
+To create an optimized production build:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
 
-## Deploy on Vercel
+npm run build | yarn build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Start the production server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm start | yarn start
+```
+
+## Project Structure
+
+```bash
+
+.next/                   - Contains the build output.
+public/                  - Static files such as images and manifests.
+src/                     - Source code for the application.
+├── components/          - Reusable UI components.
+├── styles/              - Global styles and CSS modules.
+└── utils/               - Utility functions and helpers.
+
+```
+
+## License
+
+This project is licensed under the MIT License.
+
+
+## Author
+
+### Le Quoc Dat
+
+Passionate software developer with a knack for creating efficient and user-friendly applications. Dedicated to continuous learning and improvement, always exploring new technologies and methodologies.
+
+- **Portfolio:** [Website Portfolio](https://ledat-portfolio.vercel.app/)
+- **GitHub:** [Le Quoc Dat](https://github.com/le-dat)
+- **LinkedIn:** [Le Quoc Dat](https://www.linkedin.com/in/le-quoc-dat)
+
+Feel free to reach out for collaboration or any inquiries!
